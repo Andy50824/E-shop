@@ -4,11 +4,8 @@ const PRODUCT_DETAIL_REQUEST = 'PRODUCT_DETAIL_REQUEST'
 const PRODUCT_DETAIL_SUCCESS = 'PRODUCT_DETAIL_SUCCESS'
 const PRODUCT_DETAIL_FAIL = 'PRODUCT_DETAIL_FAIL'
 
-const initialState = {
-    product: {},
-}
 
-export const productDetailReducer = (state = initialState, action) => {
+export const productDetailReducer = (state = {product: {}}, action) => {
     switch(action.type){
         case PRODUCT_DETAIL_REQUEST:
             return {...state,
